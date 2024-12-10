@@ -16,4 +16,4 @@ O programa permite que o usuário:
 
 1. Clone o repositório para sua máquina local:
    ```bash
-   git clone https://github.com/seu-usuario/calculadora-simples-java.git
+   git clone git@github.com:RodolffoNMS/calculadora.git
