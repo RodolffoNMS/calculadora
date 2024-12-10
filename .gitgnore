@@ -1,0 +1,72 @@
+# NetBeans
+nbproject/
+nbproject-private/
+build/
+dist/
+*.bak
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+*.ipr
+*.iws
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+target/
+
+# JetBrains (geral para todas as IDEs JetBrains)
+*.idea/
+*.iml
+*.ipr
+out/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Arquivos de backup
+*.bak
+*.old
+*.orig
+
+# Arquivos de lock
+*.lock
+
+# Arquivos de compilação
+*.class
+*.o
+*.pyc
+*.pyo
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Node.js (caso use Node.js no projeto)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python (caso use Python no projeto)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
