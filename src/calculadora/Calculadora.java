@@ -1,5 +1,8 @@
 package calculadora;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class Calculadora {
@@ -8,7 +11,6 @@ public class Calculadora {
         Scanner scanner = new Scanner(System.in);
         int operacao;
         final int TAMANHO_MAXIMO = 15; // Define o tamanho máximo permitido para o vetor
-
 
         do {
             // Menu da calculadora
@@ -20,6 +22,7 @@ public class Calculadora {
             System.out.println("5 - Imprimir vetor com for");
             System.out.println("6 - Imprimir vetor com while");
             System.out.println("7 - Imprimir vetor com do/while");
+            System.out.println("8 - Calcular a idade a partir da data de nascimento");
             System.out.println("0 - Sair");
             System.out.print("Digite o número correspondente à operação: ");
             operacao = scanner.nextInt();
@@ -73,13 +76,14 @@ public class Calculadora {
                         System.out.print("Digite o tamanho do vetor (máximo " + TAMANHO_MAXIMO + "): ");
                         tamanhoVetor = scanner.nextInt();
                         if (tamanhoVetor > TAMANHO_MAXIMO) {
-                            System.out.println("Erro: O tamanho do vetor não pode ser maior que " + TAMANHO_MAXIMO + ".");
+                            System.out
+                                    .println("Erro: O tamanho do vetor não pode ser maior que " + TAMANHO_MAXIMO + ".");
                         } else if (tamanhoVetor <= 0) {
                             System.out.println("Erro: O tamanho do vetor deve ser maior que 0.");
                         }
                     } while (tamanhoVetor > TAMANHO_MAXIMO || tamanhoVetor <= 0);
                     // Declara o vetor com o tamanho informado pelo usuário
-                    int [] vetor = new int[tamanhoVetor];
+                    int[] vetor = new int[tamanhoVetor];
                     // Preenche o vetor com valores fornecidos pelo usuário
                     System.out.println("Digite os valores do vetor:");
                     for (int i = 0; i < vetor.length; i++) {
@@ -98,7 +102,8 @@ public class Calculadora {
                         System.out.print("Digite o tamanho do vetor (máximo " + TAMANHO_MAXIMO + "): ");
                         tamanhoVetor = scanner.nextInt();
                         if (tamanhoVetor > TAMANHO_MAXIMO) {
-                            System.out.println("Erro: O tamanho do vetor não pode ser maior que " + TAMANHO_MAXIMO + ".");
+                            System.out
+                                    .println("Erro: O tamanho do vetor não pode ser maior que " + TAMANHO_MAXIMO + ".");
                         } else if (tamanhoVetor <= 0) {
                             System.out.println("Erro: O tamanho do vetor deve ser maior que 0.");
                         }
@@ -119,14 +124,14 @@ public class Calculadora {
                     }
                     break;
 
-
                 case 7:
                     // Solicita o tamanho do vetor
                     do {
                         System.out.print("Digite o tamanho do vetor (máximo " + TAMANHO_MAXIMO + "): ");
                         tamanhoVetor = scanner.nextInt();
                         if (tamanhoVetor > TAMANHO_MAXIMO) {
-                            System.out.println("Erro: O tamanho do vetor não pode ser maior que " + TAMANHO_MAXIMO + ".");
+                            System.out
+                                    .println("Erro: O tamanho do vetor não pode ser maior que " + TAMANHO_MAXIMO + ".");
                         } else if (tamanhoVetor <= 0) {
                             System.out.println("Erro: O tamanho do vetor deve ser maior que 0.");
                         }
@@ -145,6 +150,25 @@ public class Calculadora {
                         System.out.println(vetor[i]);
                         i++;
                     } while (i < vetor.length);
+                    break;
+                case 8:
+                    System.out.print("Digite o seu nome: ");
+                    String nome = scanner.nextLine();
+
+                    System.out.print("Digite sua data de nascimento (formato dd/MM/yyyy): ");
+                    String dataNascimentoStr = scanner.nextLine();
+
+                    // Converter a data de nascimento para LocalDate
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                    LocalDate dataNascimento = LocalDate.parse(dataNascimentoStr, formatter);
+
+                    // Calcular a idade
+                    LocalDate dataAtual = LocalDate.now();
+                    int idade = Period.between(dataNascimento, dataAtual).getYears();
+
+                    // Exibir o resultado
+                    System.out.println("Nome: " + nome);
+                    System.out.println("Idade: " + idade + " anos");
                     break;
 
                 default:
