@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: calculadora.controllers.CalculadoraControllerTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.049 sec <<< FAILURE!
+calculadora.controllers.CalculadoraControllerTest.testProcessarOperacoesComVetorTamanhoInvalido()  Time elapsed: 0.022 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3111)
+	at calculadora.controllers.CalculadoraControllerTest.testProcessarOperacoesComVetorTamanhoInvalido(CalculadoraControllerTest.java:132)
+
+calculadora.controllers.CalculadoraControllerTest.testProcessarOperacoesComVetorValoresIncompativeis()  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3111)
+	at calculadora.controllers.CalculadoraControllerTest.testProcessarOperacoesComVetorValoresIncompativeis(CalculadoraControllerTest.java:146)
+
